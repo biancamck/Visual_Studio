@@ -1,0 +1,52 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<html>
+<head>
+    
+</head>
+
+
+
+<body>
+    <h1>fucking work already</h1>
+    <div>
+        <!--<img id="myImage" src="Mass-v1-insta.jpg" alt="mass" height="400">-->
+        <img id="myImage" src="https://peopledotcom.files.wordpress.com/2017/11/dog.jpg" alt="mass" height="400">
+        <p>Click button below to move the image to right</p>
+
+        <input type="button" value="MASS info" onclick="moveRight()">
+    </div>
+    <div id="animate">
+        <h1 class="display-4">MASS presents...</h1>
+        <h2>Daytime Techno Service</h2>
+        <h2>Edition One: Andrew Boie and Screendoor</h2>
+    </div>
+
+
+    <script type="text/javascript">
+
+            var imgObj = null;
+
+            function init() {
+               imgObj = document.getElementById('myImage');
+               imgObj.style.position= 'relative';
+               imgObj.style.left = '0px';
+            }
+            function moveRight() {
+               imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+            }
+
+            window.onload = init;
+
+    </script>
+
+    <div class="video">
+        <p>Listen to Andrew Boie lay down those technno trax in the following video!</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/etIOVT5EGsU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+</body>
+</html>
